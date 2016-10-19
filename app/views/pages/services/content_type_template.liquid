@@ -1,0 +1,205 @@
+---
+title: Content type template
+
+# true if the page is included in the menu
+listed: true
+
+# true if the page is published
+published: true
+
+# true if the page can be used as a layout for new pages created by the editors
+# is_layout: true
+
+# position among sibling pages
+# position: 1
+
+# sets a redirection to the given url (301)
+# redirect_url: "<url to a page or to a remote url>"
+
+# other unique identifier of this page. To be used with the path_to liquid tag.
+# handle: my-page-handle
+
+# content type that this page is templatizing
+content_type: news
+
+
+# editable_elements:
+#   'some_block/some_slug': "<text>"
+#   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
+---
+{% extends 'layouts/simple' %}
+
+{% block content/main, short_name: true %}
+
+
+{% block page_title %}
+  <!-- Page Title -->
+  <section class="breadcrumb-wrap">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Services Detail</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+
+  <section class="page-wrap page-service">
+    <div class="container">
+      <div class="row">
+        <main class="main-content toleft">
+          <div class="content">
+            <article>
+              <div class="media">
+                <p class="image"><img src="images/pages/img_about02.jpg" alt="image"></p>
+              </div><!-- /.media -->
+              <div class="clearfix">
+                <div class="left">
+                  <div class="box01">
+                    <h3>Business Planning</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p>Nemo ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                  </div>
+                  <div class="box02">
+                    <h3>Strategy Development</h3>
+                    <p>You can transform your business to a revenue-producing asset that lets you work as much or as little as you want.</p>
+                    <div class="chart">
+                      <p class="img"><img src="images/pages/img_chart.png" alt="image"></p>
+                      <p><span><img src="images/pages/chart_red.png" alt="chart">Red</span><span><img src="images/pages/chart_green.png" alt="chart">Green</span><span><img src="images/pages/chart_purple.png" alt="chart">Purple</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="box-download">
+                    <h3>This awesome service brings full interest information for your purpose</h3>
+                    <p class="btn-download pdf"><a href="#">Download .PDF</a></p>
+                    <p class="btn-download doc"><a href="#">Download .DOC</a></p>
+                  </div>
+                  <div class="box-list">
+                    <h3>Strategic &amp; tactical planning</h3>
+                    <span>Our renowned coaching programs will allow you to:</span>
+                    <ul class="icon-list">
+                      <li>Work fewer hours — and make more money</li>
+                      <li>Attract and retain quality, high-paying customers</li>
+                      <li>Manage your time so you’ll get more done in less time</li>
+                      <li>Hone sharp leadership skills to manage your team</li>
+                      <li>Hone sharp leadership skills to manage your team</li>
+                      <li>Automate your business, so you can leave for days, weeks, or even months at a time</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-box">
+                <h3>Research beyond the business plan</h3>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Strategy Development
+                        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="panel-body">
+                        <div class="row">
+                          <div class="col-sm-12">Good strategy is the antidote to competition. Strategic thinking is the process of developing a strategy that defines your value proposition and your unique value chain. This process includes market and competitive research as well as an assessment of the company’s capabilities and the industry forces impacting it.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Strategic Plan Development
+                        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="panel-body">
+                        <div class="row">
+                          <div class="col-sm-12">Good strategy is the antidote to competition. Strategic thinking is the process of developing a strategy that defines your value proposition and your unique value chain. This process includes market and competitive research as well as an assessment of the company’s capabilities and the industry forces impacting it.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Strategic Plan Execution Management
+                        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                      <div class="panel-body">
+                        <div class="row">
+                          <div class="col-sm-12">Good strategy is the antidote to competition. Strategic thinking is the process of developing a strategy that defines your value proposition and your unique value chain. This process includes market and competitive research as well as an assessment of the company’s capabilities and the industry forces impacting it.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </main>
+        <aside class="sidebar">
+          <div class="sidebar-nav">
+            <ul>
+              <li><a href="about.html">Company Overview</a></li>
+              <li><a href="about.html" class="active">Careers</a></li>
+              <li><a href="about.html">Company History</a></li>
+              <li><a href="about.html">Honors &amp; Awards</a></li>
+              <li><a href="about.html">Our Team Grid</a></li>
+              <li><a href="about.html">Our Team List</a></li>
+              <li><a href="about.html">Our Partners</a></li>
+              <li><a href="about.html">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="brochure">
+            <h3>Our Brochure</h3>
+            <p>View our 2016 financial prospectus brochure for an easy to read guide on all of the services offered.</p>
+            <p class="btn-cons btn-download"><a href="#">Download .PDF</a></p>
+          </div>
+          <div class="testimonials-sidebar">
+            <h3>Testimonials</h3>
+            <div class="testimonial03" data-items="1" data-itemsdesktop="1" data-itemsdesktopsmall="1" data-itemstablet="1" data-itemsmobile="1" data-slidespeed="1" data-autoplay="true" data-nav="false" data-pagination="false">
+              <div class="item">
+                <p class="text">Consulting WP really helped us achieve our financial goals. The slick presentation along with      fantastic readability ensures that our financial standing is stable.</p>
+                <p class="media">
+                  <img src="images/pages/avatar01.jpg" alt="">
+                  <span class="name">Kevin Johnston<em class="position">Ceo &amp; Founder</em></span>
+                </p>
+              </div>
+              <div class="item">
+                <p class="text">Consulting WP really helped us achieve our financial goals. The slick presentation along with      fantastic readability ensures that our financial standing is stable.</p>
+                <p class="media">
+                  <img src="images/pages/avatar01.jpg" alt="">
+                  <span class="name">Kevin Johnston<em class="position">Ceo &amp; Founder</em></span>
+                </p>
+              </div>
+              <div class="item">
+                <p class="text">Consulting WP really helped us achieve our financial goals. The slick presentation along with      fantastic readability ensures that our financial standing is stable.</p>
+                <p class="media">
+                  <img src="images/pages/avatar01.jpg" alt="">
+                  <span class="name">Kevin Johnston<em class="position">Ceo &amp; Founder</em></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock %}
+

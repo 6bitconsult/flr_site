@@ -1,0 +1,28 @@
+- "Sample 1":
+    subtitle: "Consequatur velit corporis tempore dignissimos itaque iusto."
+    description: "Inventore sunt laudantium et explicabo hic rem expedita. Consequatur ab suscipit qui iure. Et est consequatur aut dicta. Qui et et excepturi sunt odio earum. Qui blanditiis at."
+    button_text: "Libero qui vel veniam eaque."
+    button_link: "Vel beatae nostrum velit qui occaecati et ipsum."
+    # media: /samples/home_about/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 2":
+    subtitle: "Accusamus ex doloremque qui."
+    description: "Est et aliquid ad. Voluptates cupiditate odit sequi accusantium minus. Tempora est ipsam accusantium vel. Aliquam maxime tempora iure. Culpa saepe eligendi aliquam sit delectus ipsum."
+    button_text: "Accusantium aliquam ea consequatur id rerum natus sit qui."
+    button_link: "Similique officiis quia non dolorem mollitia nihil vel ut."
+    # media: /samples/home_about/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 3":
+    subtitle: "Expedita quaerat eos aut ea voluptatum architecto in."
+    description: "Minus placeat dignissimos voluptate corrupti est omnis. Dolore quasi quae facilis. Atque ea quam quas quasi. Architecto et qui quibusdam. Rerum beatae quas aperiam molestias cumque ut."
+    button_text: "Qui et esse est fuga veritatis qui earum."
+    button_link: "Architecto optio voluptatem molestias."
+    # media: /samples/home_about/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 4":
+    subtitle: "Omnis enim sed et."
+    description: "Voluptatem eum excepturi voluptas labore. Aut dolores occaecati adipisci soluta nulla. Illum voluptatem ut et a eos porro consequuntur. Accusantium quod sed laboriosam mollitia dolor nostrum possimus."
+    button_text: "Odio et aut dicta inventore."
+    button_link: "Quia ab est sit sint."
+    # media: /samples/home_about/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+

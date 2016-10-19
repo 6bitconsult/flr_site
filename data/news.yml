@@ -1,0 +1,95 @@
+- "Sample 1":
+    body: "Fuga occaecati iure. Voluptas ullam molestiae recusandae in omnis aliquid qui. Corrupti non id ea est natus. Et quia quis sint porro qui."
+    category: "bar"
+    tags: [example, gallery, image]
+    author: charles-rodriguez
+    date: "2016/10/01"
+    # image: /samples/news/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 2":
+    body: "Id velit itaque sed et aut tempore natus. Aut molestiae cupiditate et voluptatem nobis ad corporis. Culpa voluptate et pariatur non est. Recusandae et eveniet velit cumque et. Aut fugit est sit porro non."
+    category: "foo"
+    tags: [example, gallery, image]
+    author: charles-rodriguez
+    date: "2016/10/02"
+    # image: /samples/news/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 3":
+    body: "Qui dignissimos sed et ex eos quas. Laboriosam beatae ab. Ad suscipit voluptatum illo ipsa dolor molestiae. Exercitationem et architecto occaecati."
+    category: "foo"
+    tags: [example, gallery, image]
+    author: charles-rodriguez
+    date: "2016/10/03"
+    # image: /samples/news/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 4":
+    body: "Ex dolorum dolorem iure aut at. Eum saepe tempora facere quaerat. Fuga ex aliquam ea non sequi cupiditate tempora. Reiciendis in omnis et deleniti quod incidunt."
+    category: "foo"
+    tags: [example, gallery, image]
+    author: charles-rodriguez
+    date: "2016/10/04"
+    # image: /samples/news/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 5":
+    body: "Fuga occaecati iure. Voluptas ullam molestiae recusandae in omnis aliquid qui. Corrupti non id ea est natus. Et quia quis sint porro qui."
+    category: "bar"
+    tags: [example, gallery, image]
+    author: charles-rodriguez
+    date: "2016/10/05"
+    # image: /samples/news/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 6":
+    body: "Id velit itaque sed et aut tempore natus. Aut molestiae cupiditate et voluptatem nobis ad corporis. Culpa voluptate et pariatur non est. Recusandae et eveniet velit cumque et. Aut fugit est sit porro non."
+    category: "foo"
+    tags: [example, gallery, image]
+    author: charles-rodriguez
+    date: "2016/10/06"
+    # image: /samples/news/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 7":
+    body: "Qui dignissimos sed et ex eos quas. Laboriosam beatae ab. Ad suscipit voluptatum illo ipsa dolor molestiae. Exercitationem et architecto occaecati."
+    category: "foo"
+    tags: [example, gallery, image]
+    author: charles-rodriguez
+    date: "2016/10/07"
+    # image: /samples/news/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 8":
+    body: "Ex dolorum dolorem iure aut at. Eum saepe tempora facere quaerat. Fuga ex aliquam ea non sequi cupiditate tempora. Reiciendis in omnis et deleniti quod incidunt."
+    category: "foo"
+    tags: [example, gallery, image]
+    author: charles-rodriguez
+    date: "2016/10/08"
+    # image: /samples/news/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 9":
+    body: "Fuga occaecati iure. Voluptas ullam molestiae recusandae in omnis aliquid qui. Corrupti non id ea est natus. Et quia quis sint porro qui."
+    category: "bar"
+    tags: [example, gallery, image]
+    author: charles-rodriguez
+    date: "2016/10/09"
+    # image: /samples/news/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 10":
+    body: "Id velit itaque sed et aut tempore natus. Aut molestiae cupiditate et voluptatem nobis ad corporis. Culpa voluptate et pariatur non est. Recusandae et eveniet velit cumque et. Aut fugit est sit porro non."
+    category: "foo"
+    tags: [example, gallery, image]
+    author: charles-rodriguez
+    date: "2016/10/10"
+    # image: /samples/news/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 11":
+    body: "Qui dignissimos sed et ex eos quas. Laboriosam beatae ab. Ad suscipit voluptatum illo ipsa dolor molestiae. Exercitationem et architecto occaecati."
+    category: "foo"
+    tags: [example, gallery, image]
+    author: charles-rodriguez
+    date: "2016/10/11"
+    # image: /samples/news/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 12":
+    body: "Ex dolorum dolorem iure aut at. Eum saepe tempora facere quaerat. Fuga ex aliquam ea non sequi cupiditate tempora. Reiciendis in omnis et deleniti quod incidunt."
+    category: "foo"
+    tags: [example, gallery, image]
+    author: charles-rodriguez
+    date: "2016/10/12"
+    # image: /samples/news/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.

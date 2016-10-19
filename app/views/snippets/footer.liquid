@@ -1,0 +1,62 @@
+<!--<div class="container">
+  <footer class="footer">
+    <p>&copy; Company {{ now | localized_date: '%Y' }} </p>
+  </footer>
+</div>-->
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="footer-info">
+          <p class="footer-logo"> 
+            <img src="{{ contents.footer_design.first.logo.url | default: 'images/common/logo.png' | resize: '243x126#' }}" alt="Consultant">
+          </p>
+          <p class="description">{{contents.footer_design.first.description}}</p>
+          <p class="phone"><a href="tel:{{ contents.footer_design.first.phone }}">{{contents.footer_design.first.phone}} </a><a href="mailto:{{ contents.footer_design.first.email }}"><span>{{contents.footer_design.first.email}}</span></a></p>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="footernav">
+          <nav class="footernav01">
+            <h3>Follow us</h3>
+            <ul class="followus">
+              <li><a href="{{ contents.footer_design.first.facebookUrl }}"><i class="ion-social-facebook"></i>Facebook</a></li>
+              <li><a href="{{ contents.footer_design.first.twitterUrl }}"><i class="ion-social-twitter"></i>Twitter</a></li>
+              <li><a href="{{ contents.footer_design.first.linkedInUrl }}"><i class="ion-social-linkedin"></i>Linkedin</a></li>
+              <li><a href="{{ contents.footer_design.first.youtubeUrl }}"><i class="ion-social-youtube"></i>Youtube</a></li>
+             </ul>
+          </nav><!--
+          <nav class="footernav02">
+            <h3>Our services</h3>
+            <ul class="ourservices">
+              <li><a href="#">Accumulation</a></li>
+              <li><a href="#">Taxation</a></li>
+              <li><a href="#">Risk Management</a></li>
+              <li><a href="#">Estate Planning</a></li>
+              <li><a href="#">Business Planning</a></li>
+             </ul>
+          </nav>-->
+          <nav class="footernav03">
+            <h3>Business hours</h3>
+            {{ contents.footer_design.first.business_hours }}
+          </nav>
+        </div>
+      </div>
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+  <div class="bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10">
+          <p class="copyright">©2016 All Rights Reserved</p>
+        </div><!-- /.col-md-10 -->
+        <div class="col-sm-2">
+          <p class="totop"><a href="#">Back Top<img src="/images/common/icon-totop.png" alt="back top"></a></p>
+        </div>
+      </div><!-- /.row -->
+    </div>
+  </div>
+</footer>

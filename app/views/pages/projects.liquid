@@ -1,0 +1,93 @@
+---
+title: Projects
+
+# true if the page is included in the menu
+listed: true
+
+# true if the page is published
+published: true
+
+# true if the page can be used as a layout for new pages created by the editors
+# is_layout: true
+
+# position among sibling pages
+# position: 1
+
+# sets a redirection to the given url (301)
+# redirect_url: "<url to a page or to a remote url>"
+
+# other unique identifier of this page. To be used with the path_to liquid tag.
+# handle: my-page-handle
+
+# content type that this page is templatizing
+# content_type: "<slug of one of the content types>"
+
+
+# editable_elements:
+#   'some_block/some_slug': "<text>"
+#   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
+---
+
+{% extends 'layouts/simple' %}
+
+{% block content/main, short_name: true %}
+
+{% block page_title %}
+  <!-- Page Title -->
+  <section class="breadcrumb-wrap">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Our Project</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+
+
+{% editable_model projects %}
+<section class="page-wrap blog-post clearfix">
+    <div class="container">
+      <div class="row">
+        <main class="main-content margin70">
+          <div class="content">
+            <div class="filter-wrap">
+              <ul class="filter">
+                <li class="active"><a href="#">All</a></li>
+                {% for projects_category in contents.projects_category %}
+                  <li><a data-filter=".{{projects_category.code}}" href="#">{{projects_category.title}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="portfolio popup-gallery">
+
+              {% for project in contents.projects %}
+
+                <div class="col-sm-4 col-xs-12 item {{ project.category.code }}">
+                  <article>
+                    <p class="media">
+                      <a href="{{ project.image.url | default: 'http://loremflickr.com/100/100' | resize: '470x400#' }}" class="popup" data-source="{{ project.image.url | default: 'http://loremflickr.com/100/100' | resize: '470x400#' }}">
+                        <img src="{{ project.image.url | default: 'http://loremflickr.com/370/245' | resize: '370x245#' }}" alt="{{ project.name }}">
+                      </a>
+                    </p>
+                    <h3>
+                      <a href="projects-detail?title={{ project.name }}">{{ project.name }}</a>
+                    </h3>
+                    <p>{{ project.client }}</p>
+                  </article>
+                </div>
+
+              {% endfor %}
+              
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+</section>
+{% endeditable_model %}
+
+{% endblock %}

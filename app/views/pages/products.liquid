@@ -1,0 +1,108 @@
+---
+title: Products
+
+# true if the page is included in the menu
+listed: true
+
+# true if the page is published
+published: true
+
+# true if the page can be used as a layout for new pages created by the editors
+# is_layout: true
+
+# position among sibling pages
+# position: 1
+
+# sets a redirection to the given url (301)
+# redirect_url: "<url to a page or to a remote url>"
+
+# other unique identifier of this page. To be used with the path_to liquid tag.
+# handle: my-page-handle
+
+# content type that this page is templatizing
+# content_type: "<slug of one of the content types>"
+
+
+# editable_elements:
+#   'some_block/some_slug': "<text>"
+#   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
+---
+{% extends 'layouts/simple' %}
+
+{% block content/main, short_name: true %}
+
+<section class="breadcrumb-wrap">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Our Products</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% editable_model products %}
+
+<section class="page-wrap page-team left-sidebar">
+  <div class="container">
+    <div class="row">
+      <main class="main-content">
+          <div class="content">
+            <div class="teammember list clearfix portfolio popup-gallery">
+              {% for product_ in contents.products %}
+                <article class="item {{product_.category.code}}">
+                  <p class="media">
+                    <img src="{{product_.image.url  | default: 'http://loremflickr.com/150/150' | resize: '470x400#' }}" alt="{{product_.title}}" />
+                  </p>
+                  <h3>{{product_.title}}</h3>
+                  <span class="position">{{product_.subtitle}}</span>
+                  <p class="description">{{product_.description}}</p>
+                </article>
+              {% endfor %}
+            </div>
+          </div>
+      </main>
+      <aside class="sidebar">
+        <div class="sidebar-nav">
+          <ul  class="filter">
+            <li class="active" style="display:block !important;"><a href="#"  class="custom active">All</a></li>
+            {% for product_category in contents.products_category %}
+              <li  style="display:block !important;"><a class="custom" data-filter=".{{product_category.code}}" href="#"> {{product_category.title}} </a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="brochure">
+
+          {% editable_model brochure %}
+          <h3>{{contents.brochure.first.title}}</h3>
+          <p>{{contents.brochure.first.description}}</p>
+          <p class="btn-cons btn-download">
+            <a target="blank" href="{{contents.brochure.first.file_.url | default: '/samples/brochure/test.pdf'}}" >
+              Download .PDF
+            </a>
+          </p>
+          {% endeditable_model %}
+        </div>
+        <div class="testimonials-sidebar">
+          <h3>Testimonials</h3>
+          <div class="testimonial03" data-items="1" data-itemsdesktop="1" data-itemsdesktopsmall="1" data-itemstablet="1" data-itemsmobile="1" data-slidespeed="1" data-autoplay="true" data-nav="false" data-pagination="false">
+            {% for testimonial in contents.testimonials %}
+              <div class="item">
+                <p class="text">{{testimonial.description}}</p>
+                <p class="media">
+                  <img style="width:50px; height:50px;" src="{{testimonial.image.url  | default: 'http://loremflickr.com/100/100' | resize: '50x50#' }}" alt="{{testimonial.name + ' ' + testimonial.role}}">
+                  <span class="name">{{testimonial.name}}<em class="position">{{testimonial.role}}</em></span>
+                </p>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+{% endeditable_model %}
+
+{% endblock %}

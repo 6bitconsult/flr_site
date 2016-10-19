@@ -1,0 +1,20 @@
+- "Sample 1":
+    role: "Dolorem ut accusamus suscipit autem culpa blanditiis."
+    description: "Et pariatur nisi. Quasi in quis eligendi. Impedit iste repellendus temporibus quia magni velit quasi."
+    # image: /samples/testimonials/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 2":
+    role: "Qui dolore aut non sit quisquam consequatur quasi quae."
+    description: "Possimus porro ut cupiditate odit necessitatibus. Aperiam sit iusto quo. Asperiores laudantium eos eos voluptas inventore saepe neque."
+    # image: /samples/testimonials/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 3":
+    role: "Voluptates in quasi ipsam."
+    description: "Consequatur fugiat laudantium ea et blanditiis natus ab. Maiores doloremque et rerum veritatis. Libero consequatur ipsam natus. Mollitia ea quos fugit saepe et."
+    # image: /samples/testimonials/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 4":
+    role: "Quis quam repellendus placeat voluptatum eligendi dolorum totam."
+    description: "Autem quo fugiat non incidunt. Accusamus ut excepturi. Veniam voluptatem exercitationem ducimus iste ut aut animi. Vitae dolores ut vero."
+    # image: /samples/testimonials/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+

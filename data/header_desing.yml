@@ -1,0 +1,5 @@
+- "020 8567 0707":
+    phone1: "0-208-567-0707"    
+    address: "51 Uxbridge Road, San Francisco W7 3PX"
+    address_maps: "https://www.google.com/maps/place/Hanwell+Dental+Practice/@51.5091888,-0.3354953,17z/data=!3m1!4b1!4m5!3m4!1s0x48760d7f343da9c7:0xa81f0819efe95f1a!8m2!3d51.5091888!4d-0.3333066"
+    # logo: /samples/header_desing/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.

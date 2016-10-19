@@ -1,0 +1,28 @@
+- "Sample 1":
+    subitle: "Voluptatem laborum id et voluptatum repudiandae at quis."
+    description: "Eum voluptas id voluptatibus ad. Et officiis aut qui dignissimos. Dolorem aliquid et. Necessitatibus maxime eos quos sed incidunt."
+    button_text: "Optio et aut alias."
+    button_link: "Sit et nihil sed dignissimos aut distinctio."
+    # media: /samples/slider/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 2":
+    subitle: "Quam alias exercitationem et quod nisi suscipit."
+    description: "Autem atque dicta quia eos recusandae temporibus dolor. Placeat laborum quas accusamus voluptas quod aperiam. Qui non autem ea et consequatur dolorem ipsam. Maiores ea eaque accusamus provident facere accusantium dolorum. Quia ut quia repellendus nobis placeat aut."
+    button_text: "Et suscipit rem quia dolor."
+    button_link: "Non est quia enim ipsum sit ea."
+    # media: /samples/slider/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 3":
+    subitle: "Consequatur ut accusamus vitae sapiente adipisci sed."
+    description: "Et quisquam quo sed beatae aliquam cum dicta. Asperiores maiores rem quo et et molestias. Et est nisi itaque aut aut. Quia impedit provident ratione magnam dicta. Et accusamus delectus adipisci eum."
+    button_text: "Labore numquam sed cumque dolor est sit rerum beatae."
+    button_link: "Distinctio nihil consequuntur nulla."
+    # media: /samples/slider/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 4":
+    subitle: "Non voluptatem esse blanditiis."
+    description: "Qui ut velit incidunt. Nesciunt suscipit dolorem qui et cupiditate. Ex vitae dolorum. Velit necessitatibus minus. Est necessitatibus quia nobis."
+    button_text: "Aut voluptatem iusto aut."
+    button_link: "Consectetur iure suscipit quam corrupti ipsum harum non."
+    # media: /samples/slider/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+

@@ -1,0 +1,114 @@
+---
+title: Project Detail
+
+# true if the page is included in the menu
+listed: true
+
+# true if the page is published
+published: true
+
+# true if the page can be used as a layout for new pages created by the editors
+# is_layout: true
+
+# position among sibling pages
+# position: 1
+
+# sets a redirection to the given url (301)
+# redirect_url: "<url to a page or to a remote url>"
+
+# other unique identifier of this page. To be used with the path_to liquid tag.
+# handle: my-page-handle
+
+# content type that this page is templatizing
+# content_type: "<slug of one of the content types>"
+
+
+# editable_elements:
+#   'some_block/some_slug': "<text>"
+#   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
+---
+
+{% extends 'layouts/simple' %}
+
+{% block content/main, short_name: true %}
+
+
+{% block page_title %}
+
+<!-- Page Title -->
+  <section class="breadcrumb-wrap">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Contact</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+
+
+  <!-- Contact Page 01 -->
+  <section class="page-contact">
+    <div class="container">
+      <div class="row">
+        <main class="main-content">
+          <div class="content">
+            <div class="contact-info">
+              <div class="col-sm-4 item">
+                <span class="icon-wrap"><i class="ion-ios-home-outline"></i></span>
+                <h4>Address</h4>
+                <p>51 Uxbridge Road, San Francisco W7 3PX</p>
+              </div>
+              <div class="col-sm-4 item">
+                <span class="icon-wrap"><i class="ion-ios-telephone-outline"></i></span>
+                <h4>Phone</h4>
+                <p>Support: +123 (345) 6789</p>
+              </div>
+              <div class="col-sm-4 item">
+                <span class="icon-wrap"><i class="ion-ios-email-outline"></i></span>
+                <h4>Email</h4>
+                <p>Support: support@example.com</p>
+              </div>
+              <div class="col-sm-12"><span class="separator mgt30 mgb30"></span></div>
+              
+              <div class="contact-form">
+                {% model_form 'contact_form', success: '/contact', error: '/' %}
+                  {% if contact_form.errors %}
+                    <p>The following errors occured:</p>
+                    <ul>
+                    {% for error in contact_form.errors %}
+                      <li>{{error[0] | capitalize}} -  {{error[1]}}</li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+                  <div class="col-sm-6">
+                    <div class="input-text">
+                              <input type="text" name="content[fullName]" class="input-name form-control" placeholder="Full name" required="required">
+                          </div>
+                          <div class="input-email">
+                              <input type="email" name="content[email]" class="input-email form-control" placeholder="Email" required="required">
+                          </div>
+                          <div class="input-phone">
+                              <input type="text" name="content[phone]" class="input-phone form-control" placeholder="Phone">
+                          </div>
+                  </div>
+                  <div class="col-sm-6">
+                          <div class="textarea-message">
+                              <textarea name="content[message]" placeholder="Message" rows="3" required="required"></textarea>
+                          </div>
+                          <button type="submit" class="submit-btn">Send Now<i class="icon-paper-plane"></i></button>
+                  </div>
+                {% endmodel_form %}
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+  <div id="gmap" class="mgt50"></div>
+
+  {% endblock %}

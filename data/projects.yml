@@ -1,0 +1,24 @@
+- "Sample 1":
+    client: "Sunt velit vitae tempore assumenda laborum."
+    description: "Amet veniam dolores voluptate ab laborum facere qui. Minima dolorem doloribus provident sit. Ut repellendus sint saepe quis impedit. Eaque voluptatem qui quibusdam voluptate cumque unde. Ab totam ut."
+    category: retrofitting
+    # image: /samples/projects/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 2":
+    client: "Consectetur atque unde hic sunt non ut dolor quae."
+    description: "Possimus enim occaecati. Quia sint facere sunt illum neque ipsam. Alias ab incidunt dolores. Est nesciunt soluta eligendi qui. Possimus dolores quis laborum dolorem."
+    category: energy-efficiency
+    # image: /samples/projects/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 3":
+    client: "Vel voluptas ea eum aperiam tenetur perferendis delectus velit."
+    description: "Et voluptatibus praesentium ut. Qui impedit commodi. Dolorem dolores iste."
+    category: updating
+    # image: /samples/projects/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 4":
+    client: "Impedit voluptate omnis sed aliquid."
+    description: "Consectetur esse voluptatum accusamus doloribus. Odit magnam sequi qui illum sit ipsam. Est maiores doloribus et."
+    category: retrofitting
+    # image: /samples/projects/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+

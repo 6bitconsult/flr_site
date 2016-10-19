@@ -1,0 +1,131 @@
+---
+title: Home
+published: true
+handle: home
+---
+{% extends 'layouts/simple' %}
+
+{% block content/main %}
+
+  {% editable_model slider %}
+  <div class="tp-banner-container">
+      <div class="tp-banner" >
+        <ul>
+          {% for slr in contents.slider %}
+            <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
+              <img src="{{slr.media.url  | default: 'http://loremflickr.com/1920/700' | resize: '1920x720#' }}"  alt="slider_1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+              <div class="tp-caption 2 sft tp-resizeme"
+                data-x="center" data-hoffset="-240"
+                data-y="center" data-voffset="-99"
+                data-speed="300"
+                data-start="500"
+                data-easing="Power3.easeInOut"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.1"
+                data-endelementdelay="0.1"
+                data-endspeed="300">
+                <h1>{{slr.title}}</h1>
+              </div>
+              <!-- LAYER NR. 2 -->
+              <div class="tp-caption text1 sft tp-resizeme"
+                data-x="center" data-hoffset="-363"
+                data-y="center" data-voffset="26"
+                data-speed="300"
+                data-start="800"
+                data-easing="Power3.easeInOut"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.1"
+                data-endelementdelay="0.1"
+                data-endspeed="300">{{slr.subitle}}
+              </div>
+              <div class="tp-caption btn01 sft tp-resizeme"
+                data-x="center" data-hoffset="-506"
+                data-y="center" data-voffset="140"
+                data-speed="300"
+                data-start="1000"
+                data-easing="Power3.easeInOut"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.1"
+                data-endelementdelay="0.1"
+                data-endspeed="300"><a href="{{slr.button_link}}">{{slr.button_text}}</a>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+  </div>
+{% endeditable_model %}
+  <section class="news-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12"><h2 class="title center">News Update</h2></div>
+        {% paginate contents.news by 2 %}
+          {% for news_ in paginate.collection %}
+            <div class="col-sm-6">
+              <article class="post clearfix">
+                <div class="media">
+                  <p class="image">
+                    <img src="{{news_.image.url  | default: 'http://loremflickr.com/300/240' | resize: '300x240#' }}" alt="image">
+                  </p>
+                  <p class="date">{{ news_.date | localized_date: '%d' }}<span>{{ news_.date | localized_date: '%b' }}</span></p>
+                </div><!-- /.media -->
+                <h2 class="title-post">
+                  <a href="/news/{{ news_._slug }}">{{news_.title}}</a>
+                </h2><!-- /.title-post -->
+                <div class="entry-post">
+                  <p>{{news_.body}}</p>
+                </div><!-- /.entry-post -->
+                <div class="readmore">
+                  <p><a href="/news/{{ news_._slug }}">Continue Reading</a></p>
+                </div>
+              </article>
+            </div>
+          {% endfor %}
+        {% endpaginate %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="feature-box clearfix">
+    <div class="image">
+      <img src="{{contents.about_top.first.image.url  | default: 'http://loremflickr.com/675/638' | resize: '470x400#' }}" alt="contents.about_top.first.title">
+    </div>
+    <div class="text">
+      <h3>{{contents.about_top.first.title}}<span>{{contents.about_top.first.subtitle}}</span></h3>
+      <p>{{contents.about_top.first.description}}</p>
+      <p class="btn-cons"><a href="#">{{contents.about_top.first.button_text}}</a></p>
+    </div>
+  </section>
+
+
+
+  <!-- News Features post -->
+  <section class="feature-post popup-gallery">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12"><h2 class="title center">Featured Projects</h2></div>
+      <div class="row">
+        {% paginate contents.projects by 3 %}
+          {% for project in paginate.collection %}
+            <div class="col-sm-4">
+              <article class="feature">
+                <p class="image">
+                  <a href="{{project.image.url  | default: 'http://loremflickr.com/370/270' | resize: '370x270#' }}" class="popup" data-source="{{project.image.url  | default: 'http://loremflickr.com/370/270' | resize: '370x270#' }}">
+                    <img src="{{project.image.url  | default: 'http://loremflickr.com/370/270' | resize: '370x270#' }}" alt="feature post">
+                  </a>
+                </p>
+                <h3><a href="projects-detail?title={{ project.name }}">{{project.name}}</a></h3>
+              </article>
+            </div>
+          {% endfor %}
+        {% endpaginate %}
+      </div>
+    </div>
+  </div>
+  </section>
+
+{% endblock %}

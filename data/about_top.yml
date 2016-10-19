@@ -1,0 +1,24 @@
+- "Sample 1":
+    subtitle: "Sed quos occaecati quam non ducimus ut optio."
+    description: "Placeat sunt quia earum eaque. Inventore soluta ad. Eveniet quidem qui."
+    # image: /samples/about_top/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+    button_text: "Sunt necessitatibus sed ut dolor."
+
+- "Sample 2":
+    subtitle: "Accusantium autem dolores velit qui est est."
+    description: "Fugit quis tempore. Distinctio amet aut sed. Debitis ut omnis tenetur est. Est aut dicta perferendis expedita explicabo. Labore dignissimos officiis."
+    # image: /samples/about_top/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+    button_text: "Quia enim rerum modi velit optio fuga necessitatibus ut."
+
+- "Sample 3":
+    subtitle: "Quibusdam enim sit temporibus voluptatem repellendus."
+    description: "Ea earum quae eaque ex minus. Aut explicabo assumenda vel voluptatibus aut. Soluta minus aliquid ab et voluptatem perspiciatis. Repudiandae laboriosam quis voluptatem nostrum quam."
+    # image: /samples/about_top/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+    button_text: "Eligendi voluptatibus repellat enim quia maiores."
+
+- "Sample 4":
+    subtitle: "Voluptatem qui quis consequatur repellendus et asperiores."
+    description: "Consequatur necessitatibus debitis dicta. Eos id temporibus nobis alias. Dignissimos repudiandae suscipit sequi ea minus eos ullam. Nobis ad porro quo quia saepe. Atque voluptate est sint culpa."
+    # image: /samples/about_top/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+    button_text: "Aut dolores officiis aspernatur."
+

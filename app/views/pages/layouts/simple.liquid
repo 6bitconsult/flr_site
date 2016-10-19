@@ -1,0 +1,71 @@
+---
+title: Simple
+is_layout: true
+---
+{% extends 'layouts/default' %}
+
+{% block content %}
+
+<!--{% block header, short_name: true, priority: 1 %}
+<div class="container">
+  <div class="jumbotron">
+    {% editable_text jumbotron, rows: 5, priority: 1 %}
+      <h1>Wagon bootstrap template</h1>
+      <p>This is a simple site with editable sections like this one. No content types.</p>
+    {% endeditable_text %}
+  </div>
+</div>
+{% endblock %}-->
+
+<!--<div class="container">-->
+  {% block main, short_name: true %}
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        {% editable_text body %}
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?
+          </p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!
+          </p>
+        {% endeditable_text %}
+      </div>
+    </div>
+  {% endblock %}
+<!--</div>-->
+
+  {% block more_info, short_name: true %}
+  <section class="more-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7">
+          <div class="text">
+            <h3>Need more information?</h3>
+            <p>We can call you and help with your problem, just leave us your phone number.</p>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="subscribe">
+            <div class="subscribe subscribe-form">
+            {% model_form 'email_information', success: '/contact', error: '/' %}
+              {% if email_information.errors %}
+                <p>The following errors occured:</p>
+                <ul>
+                {% for error in email_information.errors %}
+                  <li>{{error[0] | capitalize}} -  {{error[1]}}</li>
+                {% endfor %}
+                </ul>
+              {% endif %}
+              <label>
+                <input type="email" id="email02" name="content[email]" placeholder="Enter you email..." value="{{email_information.name}}" required="required" title="Enter your email">
+              </label>
+              <input type="submit" class="submit" value="Subscribe">
+            {% endmodel_form %}
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+
+{% endblock %}

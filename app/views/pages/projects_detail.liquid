@@ -1,0 +1,98 @@
+---
+title: Project Detail
+
+# true if the page is included in the menu
+listed: true
+
+# true if the page is published
+published: true
+
+# true if the page can be used as a layout for new pages created by the editors
+# is_layout: true
+
+# position among sibling pages
+# position: 1
+
+# sets a redirection to the given url (301)
+# redirect_url: "<url to a page or to a remote url>"
+
+# other unique identifier of this page. To be used with the path_to liquid tag.
+# handle: my-page-handle
+
+# content type that this page is templatizing
+# content_type: "<slug of one of the content types>"
+
+
+# editable_elements:
+#   'some_block/some_slug': "<text>"
+#   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
+---
+
+{% extends 'layouts/simple' %}
+
+{% block content/main, short_name: true %}
+
+{% block page_title %}
+  <!-- Page Title -->
+  <section class="breadcrumb-wrap">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>{{params.title}}</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+
+
+{% editable_model projects %}
+
+
+
+<section class="page-wrap blog-post clearfix">
+    <div class="container">
+      <div class="row">
+        <main class="main-content margin70">
+          <div class="content">
+            {% for project in contents.projects %}
+              {% if project.name == params.title %}
+                
+                {{project.Description}}
+                <div class="portfolio-single">
+                  <article>
+                    <div class="col-sm-6">
+                      <h2>{{project.name}}</h2>
+                      <p>{{project.description}}</p>
+                      <div class="info">
+                        <p><span>Client:</span> {{project.client}}</p>
+                        <p><span>Category:</span><a href="#"> {{project.category.title}}</a></p>
+                        <div class="share"><span>Share:</span>
+                          <ul>
+                            <li><a class="shareLink" href="https://www.facebook.com/sharer/sharer.php?u=#url&amp;src=sdkpreparse"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="shareLink" href="https://twitter.com/intent/tweet?text=#url"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="shareLink" href="https://plus.google.com/share?url=#url"><i class="fa fa-google-plus"  aria-hidden="true"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <p class="img01"><img src="{{project.image.url  | default: 'http://loremflickr.com/570/320' | resize: '570x320#' }}" alt="Business Planning"></p>
+                      <p class="img02"><img src="{{project.image2.url  | default: 'http://loremflickr.com/275/230' | resize: '275x230#' }}" alt="Business Planning"></p>
+                      <p class="img03"><img src="{{project.image3.url  | default: 'http://loremflickr.com/275/230' | resize: '275x230#' }}" alt="Business Planning"></p>
+                    </div>
+                  </article>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </main>
+      </div>
+    </div>
+</section>
+
+{% endeditable_model %}
+
+{% endblock %}

@@ -1,0 +1,99 @@
+---
+title: About
+
+# true if the page is included in the menu
+listed: true
+
+# true if the page is published
+published: true
+
+# true if the page can be used as a layout for new pages created by the editors
+# is_layout: true
+
+# position among sibling pages
+# position: 1
+
+# sets a redirection to the given url (301)
+# redirect_url: "<url to a page or to a remote url>"
+
+# other unique identifier of this page. To be used with the path_to liquid tag.
+# handle: my-page-handle
+
+# content type that this page is templatizing
+# content_type: "<slug of one of the content types>"
+
+
+# editable_elements:
+#   'some_block/some_slug': "<text>"
+#   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
+---
+{% extends 'layouts/simple' %}
+
+{% block content/main %}
+
+  {% for at in contents.about_top %}
+    <section class="feature-box clearfix">
+      <div class="image">
+        <img src="{{at.image.url  | default: 'http://loremflickr.com/675/638' | resize: '470x400#' }}" alt="at.title">
+      </div>
+      <div class="text">
+        <h3>{{at.title}}<span>{{at.subtitle}}</span></h3>
+        <p>{{at.description}}</p>
+        <p class="btn-cons"><a href="#">{{at.button_text}}</a></p>
+      </div>
+    </section>
+  {% endfor %}
+
+  <!-- Services -->
+  <section class="services-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="title">The Midwest Difference</h2>
+        </div>
+
+        {% for ab in contents.about_bottom %}
+          <div class="col-sm-4">
+            <div class="icon-box">
+              <i class="{{ab.icon}}"></i>
+              <div class="text">
+                <h3>{{ab.title}}</h3>
+                <p>{{ab.description}}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Testimonial -->
+  <section class="testimonial-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="title center">1000+ Happy Clients</h2>
+          <div class="wrapper">
+            <div class="testimonial" data-items="2" data-itemsdesktop="2" data-itemsdesktopsmall="2" data-itemstablet="1" data-itemsmobile="1" data-slidespeed="1" data-autoplay="true" data-nav="true" data-pagination="true">
+              {% for testimonial in contents.testimonials %}
+                <div class="item">
+                  <p class="image">
+                    <img src="{{testimonial.image.url  | default: 'http://loremflickr.com/100/100' | resize: '470x400#' }}" >
+                  </p>
+                  <p class="text">
+                    {{testimonial.description}}
+                    <span class="name">{{testimonial.name}}</span>
+                    <span class="position">{{testimonial.role}}</span>
+                  </p>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

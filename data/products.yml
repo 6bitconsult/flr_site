@@ -1,0 +1,24 @@
+- "Sample 1":
+    subtitle: "Pariatur hic quo nisi."
+    description: "Autem nemo aut incidunt optio est a. Alias ab officia ut aut minus. Qui omnis nulla cupiditate. At fugiat et fugit delectus est minus deserunt. Veniam optio qui inventore dignissimos."
+    category: companies
+    # image: /samples/products/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 2":
+    subtitle: "Architecto exercitationem quis nemo dignissimos dolores quia."
+    description: "Nobis sint vel magni inventore. Fugiat fugit in eligendi. Earum molestias et dicta. Saepe sed perspiciatis eos nostrum laborum earum non. Eos similique nostrum."
+    category: careers
+    # image: /samples/products/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 3":
+    subtitle: "Et sit aut delectus eos laudantium numquam officia."
+    description: "Perspiciatis voluptas ut quia sint. A tenetur consequuntur debitis occaecati exercitationem. Ab aut dolorem molestias."
+    category: history
+    # image: /samples/products/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 4":
+    subtitle: "Sed velit at quia vel temporibus quae soluta."
+    description: "Repudiandae magni eius assumenda quia. Est architecto accusamus provident perspiciatis harum ut eos. Tempore aut consequuntur. A temporibus quod. Quisquam deleniti maxime sed voluptates pariatur eum."
+    category: partners
+    # image: /samples/products/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+

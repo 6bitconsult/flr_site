@@ -1,0 +1,60 @@
+---
+title: Default layout
+is_layout: false
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ site.name }}</title>
+
+    <link rel="shortcut icon" href="{{ 'favicon.png' | theme_image_url }}">
+
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
+
+    <!--{{ 'bootstrap.css' | stylesheet_tag }}
+    {{ 'application.css' | stylesheet_tag }}-->
+
+    {{ 'revolution-slider.css' | stylesheet_tag }}
+    {{ 'style.css' | stylesheet_tag }}
+    {{ 'responsive.css' | stylesheet_tag }}
+    {{ 'https://fonts.googleapis.com/css?family=Josefin+Sans' | stylesheet_tag }}
+
+  </head>
+  <body>
+    {% include 'nav' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'footer' %}
+
+    <!--{{ 'jquery.min.js' | javascript_tag }}
+    {{ 'bootstrap.min.js' | javascript_tag }}
+    {{ 'application.js' | javascript_tag }}-->
+
+    {{ 'plugins.js' | javascript_tag }}
+    {{ 'main.js' | javascript_tag }}
+    {{ 'jquery.themepunch.tools.min.js' | javascript_tag }}
+    {{ 'jquery.themepunch.revolution.min.js' | javascript_tag }}
+    {{ 'slider.js' | javascript_tag }}
+    {{ 'https://maps.googleapis.com/maps/api/js?sensor=false' | javascript_tag }}
+    {{ 'gmap3.min.js' | javascript_tag }}
+
+    <script type="text/javascript">
+        
+        $(document).ready(function() {
+            $(".shareLink").click(function(){
+                var url = $(this).attr("href");
+                url = url.replace("#url", location.href);
+                $(this).attr("href", url);
+            });
+        });
+
+    </script>
+
+  </body>
+</html>

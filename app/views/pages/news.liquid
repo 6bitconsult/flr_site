@@ -1,0 +1,161 @@
+---
+title: News
+
+# true if the page is included in the menu
+listed: true
+
+# true if the page is published
+published: true
+
+# true if the page can be used as a layout for new pages created by the editors
+# is_layout: true
+
+# position among sibling pages
+# position: 1
+
+# sets a redirection to the given url (301)
+# redirect_url: "<url to a page or to a remote url>"
+
+# other unique identifier of this page. To be used with the path_to liquid tag.
+# handle: my-page-handle
+
+# content type that this page is templatizing
+# content_type: "<slug of one of the content types>"
+
+
+# editable_elements:
+#   'some_block/some_slug': "<text>"
+#   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
+---
+{% extends 'layouts/simple' %}
+
+{% block content/main, short_name: true %}
+
+{% block page_title %}
+  <!-- Page Title -->
+  <section class="breadcrumb-wrap">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>News</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% editable_model news %}
+  <section class="page-wrap blog-post clearfix">
+    <div class="container">
+      <div class="row">
+        <main class="main-content toleft">
+          <div class="content" style="padding-top: 50px;">
+            {% for news in contents.news %}
+              <article class="post clearfix">
+  							<div class="media">
+  								<p class="image">
+  									<img src="{{ news.image.url | default: 'http://loremflickr.com/370/300' | resize: '370x300#' }}" alt="{{ news.title }}">
+  								</p>
+  							</div><!-- /.media -->
+  							<h2 class="title-post">
+  								<a href="/news/{{ news._slug }}">{{ news.title }}</a>
+  							</h2><!-- /.title-post -->
+  							<div class="meta-post">
+  								<span class="date">{{ news.date | localized_date: '%B %d, %Y ' }}</span>
+  								<span class="tags"><a href="#">Finance,</a><a href="#">Leasing</a></span>
+  							</div><!-- /.meta-post -->
+  							<div class="entry-post">
+  								<p>{{ news.body }}</p>
+  							</div><!-- /.entry-post -->
+  							<div class="readmore">
+  								<p><a href="/news/{{ news._slug }}">Continue Reading</a></p>
+  							</div>
+  						</article>
+            {% endfor %}
+          </div>
+        </main>
+
+        <aside class="sidebar">
+					<div class="widget widget-categories">
+						<h3 class="widget-title">Categories</h3>
+						<ul>
+							<li><a href="blog.html">Finance </a></li>
+							<li><a href="blog.html">Insurance</a></li>
+							<li><a href="blog.html">Leasing</a></li>
+							<li><a href="blog.html">Finanve</a></li>
+							<li><a href="blog.html">Business</a></li>
+						</ul>
+					</div>
+					<div class="widget widget-recent-posts">
+						<h3 class="widget-title">Recent Posts</h3>
+						<article class="clearfix">
+							<div class="wrapper">
+								<div class="media">
+									<a href="blog-single.html">
+									<img src="images/pages/img_recent01.jpg" alt="photo"></a>
+								</div>
+								<div class="content">
+									<a href="blog-single.html">Why Do I Need To Use Financial Consulting Service?</a>
+								</div>
+							</div>
+						</article>
+						<article class="clearfix">
+							<div class="wrapper">
+								<div class="media">
+									<a href="blog-single.html">
+									<img src="images/pages/img_recent02.jpg" alt="photo"></a>
+								</div>
+								<div class="content">
+									<a href="blog-single.html">What Makes A Financial Website Successful?</a>
+								</div>
+							</div>
+						</article>
+						<article class="clearfix">
+							<div class="wrapper">
+								<div class="media">
+									<a href="blog-single.html">
+									<img src="images/pages/img_recent03.jpg" alt="photo"></a>
+								</div>
+								<div class="content">
+									<a href="blog-single.html">Retail banks wake up to digital lending this year</a>
+								</div>
+							</div>
+						</article>
+						<article class="clearfix">
+							<div class="wrapper">
+								<div class="media">
+									<a href="blog-single.html">
+									<img src="images/pages/img_recent04.jpg" alt="photo"></a>
+								</div>
+								<div class="content">
+									<a href="blog-single.html">Within the construc tion industry as their overdraft</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="widget widget-tag-cloud">
+						<h3 class="widget-title">Featured Tags</h3>
+						<div class="tagcloud">
+							<a href="#" title="example">example,</a>
+							<a href="#" title="Gallery">Gallery,</a>
+							<a href="#" title="Image">Image,</a>
+							<a href="#" title="quote">quote,</a>
+							<a href="#" title="tag">tag,</a>
+							<a href="#" title="Video">Video,</a>
+							<a href="#" title="PSD Teplates">PSD Teplates,</a>
+							<a href="#" title="Business">Business,</a>
+							<a href="#" title="Portfolio">Portfolio,</a>
+							<a href="#" title="Construction">Construction,</a>
+							<a href="#" title="One Page">One Page</a>
+						</div>
+					</div>
+				</aside>
+
+      </div>
+    </div>
+  </section>
+
+{% endeditable_model %}
+
+{% endblock %}
