@@ -34,7 +34,7 @@ published: true
   {% for at in contents.about_top %}
     <section class="feature-box clearfix">
       <div class="image">
-        <img src="{{at.image.url  | default: 'http://loremflickr.com/675/638' | resize: '470x400#' }}" alt="at.title">
+        <img src="{{at.image.url  | default: 'http://loremflickr.com/675/638' | resize: '750x690#' }}" alt="at.title">
       </div>
       <div class="text">
         <h3>{{at.title}}<span>{{at.subtitle}}</span></h3>
@@ -49,7 +49,7 @@ published: true
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h2 class="title">The Midwest Difference</h2>
+          <h2 class="title">Direct Floor Difference</h2>
         </div>
 
         {% for ab in contents.about_bottom %}

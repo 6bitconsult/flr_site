@@ -7,72 +7,46 @@
 -->
 <!-- Top Bar -->
 
-<div class="header-top">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <p id="logo" class="logo">
-          <a href="{% path_to home %}" rel="home">
-            <img src="{{ contents.header_desing.first.logo.url }}" alt="brainstorm" />
-          </a>
-        </p>
-        <!-- /.logo -->
-        <div class="info">
-          <div class="address">
-            <p class="icon"><i class="ion-android-pin"></i></p>
-
-            <p class="text">
-              Call Today <a href="tel:{{ contents.header_desing.first.phone1 }}">{{ contents.header_desing.first.phone }}</a>
-              <br>
-              <a href="{{ contents.header_desing.first.address_maps }}"><span>{{ contents.header_desing.first.address }}</span></a>
-            </p>
-          </div>
-          <!--
-          <div class="open-hours">
-            <p class="icon"><i class="ion-android-watch"></i></p>
-            <p class="text">Open Hours<br><span>Mon - Sat: 8 am - 5 pm, Sunday: CLOSED </span></p>
-          </div>-->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <!-- Header -->
 <header id="header" class="header header-sticky">
   <div class="header-wrap">
     <div class="header-nav">
       <div class="container">
         <div class="row">
-          <div class="col-sm-9">
+          <div class="col-sm-12">
             <div class="btn-menu"></div>
-            <nav id="mainnav" class="mainnav">
+            <nav id="mainnav" class="mainnav col-sm-12">
 
-               <ul class="menu">
-                 <li class="{% if page.handle == 'home' %}active{% endif %}">
-                   <a href="{% path_to home %}">Home</a>
-                 </li>
-                 <li class="{% if page.fullpath == "about" %}active{% endif %}">
+               <ul class="menu col-sm-12">
+                 
+                 <li class="myLi {% if page.fullpath == "about" %}active{% endif %}">
                   <a href="/about">About</a>
                  </li>
-                 <li class="{% if page.fullpath == "services" %}active{% endif %}">
+                 <li class="myLi {% if page.fullpath == "services" %}active{% endif %}">
                   <a href="/services">Services</a>
                  </li>
-                 <li class="{% if page.fullpath == "projects" %}active{% endif %}">
+                 
+                 <li class="myLi {% if page.fullpath == "projects" %}active{% endif %}">
                   <a href="/projects">Work</a>
                  </li>
-                 <li class="{% if page.fullpath == "products" %}active{% endif %}">
+                 <li class="myLiImage">
+                   <p id="logo" class="logo">
+                    <a href="{% path_to home %}" rel="home">
+                      <img src="{{ contents.header_desing.first.logo.url }}" alt="brainstorm" style = "max-width: inherit;margin-top: 15px;" />
+                    </a>
+                    </p>
+                  </li>
+                 <li class="myLi {% if page.fullpath == "products" %}active{% endif %}">
                   <a href="/products">Products</a>
                  </li>
-                 <li class="{% if page.fullpath == "news" %}active{% endif %}">
+                 <li class="myLi {% if page.fullpath == "news" %}active{% endif %}">
                   <a href="/news">News</a>
+                 </li>
+                 <li class="myLi {% if page.fullpath == "contact" %}active{% endif %}">
+                  <a href="/contact">Contact</a>
                  </li>
                </ul><!-- /.menu -->
             </nav>
-          </div>
-          <div class="col-sm-3">
-            <p class="get-appointment">
-              <a href="/contact">Contact Us</a>
-            </p>
           </div>
         </div>
       </div><!-- /.row -->

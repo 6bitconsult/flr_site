@@ -66,8 +66,8 @@ fields:
 
 - category:
     label: Category
-    type: string
-    required: true
+    type: belongs_to
+    class_name: news_category
 
 - tags:
     label: Tags

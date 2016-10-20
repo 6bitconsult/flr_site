@@ -1,8 +1,11 @@
-- "Sample 1"
+- "Sample 1":
+    code: "sample1"  
 
-- "Sample 2"
+- "Sample 2":
+    code: "sample2"  
 
-- "Sample 3"
+- "Sample 3":
+    code: "sample3"  
 
-- "Sample 4"
-
+- "Sample 4":
+    code: "sample4"  

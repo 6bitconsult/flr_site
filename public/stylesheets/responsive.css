@@ -233,6 +233,9 @@
 
 /* All Mobile Sizes */
 @media only screen and (max-width: 767px) {
+	.myLiImage{
+		display: none;
+	}
 	.topbar .left {
 		display: none;
 	}

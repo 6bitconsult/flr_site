@@ -239,7 +239,7 @@
                     }
                 },
                 getlatlng:{
-                    address:  "209 S Park Westmont IL 60559",
+                    address:  "6810 Route 53 Woodridge Il",
                     callback: function(results) {
                         if ( !results ) return;
                         $(this).gmap3('get').setCenter(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));

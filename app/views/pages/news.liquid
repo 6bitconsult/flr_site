@@ -50,9 +50,9 @@ published: true
     <div class="container">
       <div class="row">
         <main class="main-content toleft">
-          <div class="content" style="padding-top: 50px;">
+          <div class="content popup-gallery portfolio" style="padding-top: 50px;">
             {% for news in contents.news %}
-              <article class="post clearfix">
+              <article class="post clearfix item {{news.category.code}}">
   							<div class="media">
   								<p class="image">
   									<img src="{{ news.image.url | default: 'http://loremflickr.com/370/300' | resize: '370x300#' }}" alt="{{ news.title }}">
@@ -79,75 +79,38 @@ published: true
         <aside class="sidebar">
 					<div class="widget widget-categories">
 						<h3 class="widget-title">Categories</h3>
-						<ul>
-							<li><a href="blog.html">Finance </a></li>
-							<li><a href="blog.html">Insurance</a></li>
-							<li><a href="blog.html">Leasing</a></li>
-							<li><a href="blog.html">Finanve</a></li>
-							<li><a href="blog.html">Business</a></li>
+						<ul class="filter">
+              {% for nc in contents.news_category %}
+                <li style="display: block;">
+                  <a  data-filter=".{{nc.code}}" href="#">{{nc.title}} </a>
+                </li>
+              {% endfor %}
 						</ul>
 					</div>
 					<div class="widget widget-recent-posts">
 						<h3 class="widget-title">Recent Posts</h3>
-						<article class="clearfix">
-							<div class="wrapper">
-								<div class="media">
-									<a href="blog-single.html">
-									<img src="images/pages/img_recent01.jpg" alt="photo"></a>
-								</div>
-								<div class="content">
-									<a href="blog-single.html">Why Do I Need To Use Financial Consulting Service?</a>
-								</div>
-							</div>
-						</article>
-						<article class="clearfix">
-							<div class="wrapper">
-								<div class="media">
-									<a href="blog-single.html">
-									<img src="images/pages/img_recent02.jpg" alt="photo"></a>
-								</div>
-								<div class="content">
-									<a href="blog-single.html">What Makes A Financial Website Successful?</a>
-								</div>
-							</div>
-						</article>
-						<article class="clearfix">
-							<div class="wrapper">
-								<div class="media">
-									<a href="blog-single.html">
-									<img src="images/pages/img_recent03.jpg" alt="photo"></a>
-								</div>
-								<div class="content">
-									<a href="blog-single.html">Retail banks wake up to digital lending this year</a>
-								</div>
-							</div>
-						</article>
-						<article class="clearfix">
-							<div class="wrapper">
-								<div class="media">
-									<a href="blog-single.html">
-									<img src="images/pages/img_recent04.jpg" alt="photo"></a>
-								</div>
-								<div class="content">
-									<a href="blog-single.html">Within the construc tion industry as their overdraft</a>
-								</div>
-							</div>
-						</article>
+            {% paginate contents.news by 4 %}
+              {% for news_ in paginate.collection %}
+    						<article class="clearfix">
+    							<div class="wrapper">
+    								<div class="media">
+    									<a href="/news/{{ news_._slug }}">
+    									<img src="{{ news_.image.url | default: 'http://loremflickr.com/100/80' | resize: '100x80#' }}" alt="photo"></a>
+    								</div>
+    								<div class="content">
+    									<a href="/news/{{ news_._slug }}">{{ news_.title }}</a>
+    								</div>
+    							</div>
+    						</article>
+              {% endfor %}
+            {% endpaginate %}
 					</div>
 					<div class="widget widget-tag-cloud">
 						<h3 class="widget-title">Featured Tags</h3>
 						<div class="tagcloud">
-							<a href="#" title="example">example,</a>
-							<a href="#" title="Gallery">Gallery,</a>
-							<a href="#" title="Image">Image,</a>
-							<a href="#" title="quote">quote,</a>
-							<a href="#" title="tag">tag,</a>
-							<a href="#" title="Video">Video,</a>
-							<a href="#" title="PSD Teplates">PSD Teplates,</a>
-							<a href="#" title="Business">Business,</a>
-							<a href="#" title="Portfolio">Portfolio,</a>
-							<a href="#" title="Construction">Construction,</a>
-							<a href="#" title="One Page">One Page</a>
+              {% for tags_ in contents.tags %}
+							 <a href="#" title="example">{{tags_.title}},</a>
+              {% endfor %}
 						</div>
 					</div>
 				</aside>

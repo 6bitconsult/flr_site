@@ -1,8 +1,12 @@
-- "Companies"
+- "Companies":
+    code: "Companies"
 
-- "Careers"
+- "Careers":
+    code: "Careers"
 
-- "History"
+- "History":
+    code: "History"
 
-- "Partners"
+- "Partners":
+    code: "Partners"
 

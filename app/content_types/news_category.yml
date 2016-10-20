@@ -43,3 +43,9 @@ fields:
     required: true
     hint: Explanatory text displayed in the back office
     localized: false
+- code: # The lowercase, underscored name of the field
+    label: Code # Human readable name of the field
+    type: string
+    required: true
+    hint: Explanatory text displayed in the back office
+    localized: false
